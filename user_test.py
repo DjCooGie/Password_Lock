@@ -35,7 +35,21 @@ class TestCredentials(unittest.TestCase):
 
 	Args:
 	    unittest.TestCase: facilitates creation of test cases
-    '''      
+    '''
+
+    def setUp(self):
+        '''
+        Function to create an account's credentials before each test
+        '''
+        self.new_credential = Credential('Evans','Facebook','evanjo','pass001')  
+
+    def test_init(self):
+        '''
+        Checks if instantiantion of objects is properly done
+        '''
+        self.assertEqual(self.new_credential.username,'Evans')
+
+        
 
 
 
