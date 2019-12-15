@@ -48,6 +48,10 @@ class TestCredentials(unittest.TestCase):
         Checks if instantiantion of objects is properly done
         '''
         self.assertEqual(self.new_credential.username,'Evans')
+        self.assertEqual(self.new_credential.sitename,'Facebook')
+        self.assertEqual(self.new_credential.accountname,'evanjo')
+        self.assertEqual(self.new_credential.password,'pass001')
+
 
         
 
