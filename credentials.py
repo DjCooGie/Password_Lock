@@ -23,3 +23,11 @@ class Credential:
         Saves a newly created user instance
         '''
         Credential.credentials_list.append(self)
+
+    def generate_password(self,size=6, char = string.ascii_uppercase + string.ascii_lowercase + string.digits):
+        '''
+        Generates a 6 character password for a credential
+        '''
+        gen_pass=''.join(random.choice(char) for _ in range(size))
+        return gen_pass
+
