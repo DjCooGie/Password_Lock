@@ -30,4 +30,15 @@ class Credential:
         '''
         gen_pass=''.join(random.choice(char) for _ in range(size))
         return gen_pass
+    
+    @classmethod
+    def findby_sitename(cls,sitename):
+        '''
+        Takes in a sitename and returns a credential matching the sitename
+        '''
+        for credential in cls.credentials_list:
+            if credential.sitename == sitename:
+                return credential
 
+
+   
