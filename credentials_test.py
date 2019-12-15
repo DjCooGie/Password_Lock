@@ -33,6 +33,17 @@ class TestCredentials(unittest.TestCase):
         twitter.save_credentials()
         self.assertEqual(len(Credential.credentials_list),2)
 
+    def test_findby_sitename(self):
+        '''
+        Checks if the findby_sitename method returns the correct credential
+        '''
+        self.new_credential.save_credentials()
+        twitter = Credential('Skina','Twitter','sqina','pass001')
+        twitter.save_credentials()
+        credential_exists = Credential.findby_sitename('Twitter')
+        self.assertEqual(credential_exists,twitter) 
+
+
 
 if __name__ == '__main__':
     unittest.main()
