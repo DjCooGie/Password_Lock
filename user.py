@@ -35,6 +35,9 @@ class Credential:
         '''
         Method defines properties each user object will hold.
         '''
-        
+        self.username = username
+        self.sitename = sitename
+        self.accountname = accountname
+        self.password = password
         
 
