@@ -31,6 +31,10 @@ class Credential:
     credentials_list = []
     user_credentials_list = []
 
-    
+    def __init__(self,username,sitename,accountname,password):
+        '''
+        Method defines properties each user object will hold.
+        '''
+        
         
 
