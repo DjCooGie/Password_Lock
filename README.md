@@ -32,9 +32,9 @@ Python3.6
 #### BDD
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
-| Display short-codes for navigation | **In terminal: $./pass_lock.py** | Welcome, enter a short-code: ca-Create Account, li-Log In, ex-Exit |
+| Displays short-codes for navigation | **In terminal: $./pass_lock.py** | Welcome, enter a short-code: ca-Create Account, li-Log In, ex-Exit |
 | Displays prompt for creating an account | **Enter: ca** | Enter username and password |
-| Displasys prompt for login in | **Enter: li** | Enter your account name and password |
+| Displays prompt for login in | **Enter: li** | Enter your account name and password |
 | Displays short-codes for navigation | **Successful login** | Choose short-code: cc - Create Credential, rc - Display Credentials, ex - Exit |
 | Displays prompt for creating a credential | **Enter: cc** | Enter the site name, your username and password |
 | Displays a list of credentials | **Enter: rc** | Prints a list of saved credentials |
@@ -44,7 +44,7 @@ Python3.6
 No known bugs
 
 #### Collaborate
->Incase of any questions, problems ideas concerning the website, feel free to reach out to me:
+>Incase of any questions, problems ideas concerning the app, feel free to reach out to me:
 >>Github: [Evans Nyambane](https://github.com/DjCooGie)
 >>Email: evansonchagwa01@gmail.com
 
