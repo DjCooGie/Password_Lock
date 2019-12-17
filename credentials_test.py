@@ -1,5 +1,6 @@
 import unittest
 from credentials import Credential
+from user import User
 
 class TestCredentials(unittest.TestCase):
     '''    
@@ -8,6 +9,22 @@ class TestCredentials(unittest.TestCase):
 	Args:
 	    unittest.TestCase: facilitates creation of test cases
     '''
+    
+    def test_verify_user(self):
+        '''
+        Function to test whether the login in function check_user works as expected
+        '''
+        self.new_user = User('Simion','pass001')
+        self.new_user.save_user()
+        user2 = User('Brian','pass001')
+        user2.save_user()
+        
+        for user in User.users_list:
+            if user.realname == user2.realname and user.password == user2.password:
+                current_user = user.realname
+            return current_user
+            
+        self.assertEqual(current_user,Credential.verify_user(user2.password,user2.realname))
 
     def setUp(self):
         '''
@@ -32,6 +49,22 @@ class TestCredentials(unittest.TestCase):
         twitter = Credential('Skina','Twitter','sqina','pass001')
         twitter.save_credentials()
         self.assertEqual(len(Credential.credentials_list),2)
+        
+    def tearDown(self):
+        '''
+        Clears the credentials list after every test
+        '''
+        Credential.credentials_list = []
+        User.users_list = []
+        
+    def test_output_credentials(self):
+        '''
+        Checks if the output_credentials method, displays the correct credentials.
+        '''
+        self.new_credential.save_credentials()
+        twitter = Credential('Skina','Twitter','sqina','pass001')
+        twitter.save_credentials()
+        self.assertEqual(len(Credential.output_credentials(twitter.username)),2)
 
     def test_findby_sitename(self):
         '''

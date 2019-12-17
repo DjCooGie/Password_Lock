@@ -3,11 +3,11 @@
 from user import User
 from credentials import Credential
 
-def create_user(username,password):
+def create_user(uname,password):
     '''
     Creates a new user account
     '''
-    new_user = User(username,password)                                     
+    new_user = User(uname,password)                                     
     return new_user
 
 def save_user(user):
@@ -17,11 +17,11 @@ def save_user(user):
     User.save_user(user)
 
 
-def confirm_user(username,password):
+def confirm_user(realname,password):
     '''
     function that verifies the existance of the user before create
     '''
-    verifying_user = Credential.verify_user(username,password)
+    verifying_user = Credential.verify_user(realname,password)
     return verifying_user
 
 def generate_password():
@@ -65,16 +65,16 @@ def main():
             print("-"*50)
             print(' ')
             print('To create new user account:')
-            username = input('Enter your username - ').strip()
+            realname = input('Enter your realname - ').strip()
             password = input('Create new password - ').strip()
-            save_user(create_user(username,password))
+            save_user(create_user(realname,password))
             print(" ")
-            print(f'New Account Created Successfully \n Account: {username} using: {password}')
+            print(f'New Account Created Successfully \n Account: {realname} using: {password}')
         elif short_code == 'li':
             print("-"*50)
             print(' ')
             print('To login, enter your details:')
-            username = input('Enter username - ').strip()
+            username = input('Enter realname - ').strip()
             password = str(input('Enter password - '))
             user_exists = confirm_user(username,password)
             if user_exists == username:
@@ -153,4 +153,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+  main()
