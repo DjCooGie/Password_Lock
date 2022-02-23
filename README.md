@@ -2,7 +2,7 @@
 PassTheLock is an application that manages user crendentials. i.e it saves different account passwords and usernames.
 
 ## Author
-* Evans Nyambane
+* Evans Onchagwa
 
 ### SetUp / Installation Requirements
 * python3.6
@@ -12,7 +12,7 @@ PassTheLock is an application that manages user crendentials. i.e it saves diffe
 * #### Cloning
 Navigate into the folder you want the application to be
 In your terminal;
-  > $ git clone https://github.com/DjCooGie/Password_Lock.git
+  > $ git clone https://github.com/jusinam/Password_Lock.git
   > 
   > $ cd PassTheLock
 
@@ -45,9 +45,9 @@ No known bugs
 
 #### Collaborate
 >Incase of any questions, problems ideas concerning the app, feel free to reach out to me:
->>Github: [Evans Nyambane](https://github.com/DjCooGie)
+>>Github: [Evans Onchagwa](https://github.com/jusinam)
 >>Email: evansonchagwa01@gmail.com
 
 #### License
 MIT
-&copy;2019 Evans Nyambane
+&copy;2019 Evans Onchagwa
